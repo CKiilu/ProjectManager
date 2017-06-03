@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+
+<SplitPane dividerPositions="0.29949874686716793" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ck.ProjectManager.views.EditConfigController">
+  <items>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+         <children>
+            <ScrollPane fitToWidth="true" layoutX="14.0" layoutY="58.0" prefHeight="477.0" prefWidth="209.0">
+               <content>
+                  <ListView fx:id="file_paths" editable="true" prefHeight="474.0" prefWidth="195.0" />
+               </content>
+            </ScrollPane>
+            <Label fx:id="project_type" layoutX="33.0" layoutY="17.0" prefHeight="33.0" prefWidth="136.0" text="Label" />
+         </children></AnchorPane>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" SplitPane.resizableWithParent="false">
+         <children>
+            <Button fx:id="BACK" layoutX="427.0" layoutY="545.0" mnemonicParsing="false" onMouseClicked="#goBack" text="BACK" />
+            <HBox layoutX="47.0" layoutY="9.0" prefHeight="43.0" prefWidth="410.0" spacing="30.0">
+               <children>
+                  <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="130.0" text="PRE HOOK" />
+                  <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="130.0" text="POST HOOK" />
+               </children>
+            </HBox>
+            <TabPane fx:id="editor_tab_pane" layoutX="5.0" layoutY="60.0" prefHeight="477.0" prefWidth="542.0" tabClosingPolicy="ALL_TABS" />
+         </children></AnchorPane>
+  </items>
+</SplitPane>
